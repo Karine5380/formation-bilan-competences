@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyer — Maîtriser la Pratique du Bilan de Compétences | Groupe Evolut'In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --violet: #6f00ff;
+      --rose:   #ff0080;
+      --gradient: linear-gradient(135deg, #6f00ff 0%, #c800ff 50%, #ff0080 100%);
+      --gradient-soft: linear-gradient(135deg, rgba(111,0,255,.08) 0%, rgba(255,0,128,.08) 100%);
+      --white: #ffffff;
+      --text-dark: #1a1a2e;
+      --text-mid: #555577;
+      --border: #e8e0f5;
+      --radius: 20px;
+      --shadow: 0 8px 40px rgba(111,0,255,.15);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f0ff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    /* ── CARTE PRINCIPALE ── */
+    .flyer {
+      background: var(--white);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 520px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── HEADER DÉGRADÉ ── */
+    .flyer-header {
+      background: var(--gradient);
+      padding: 36px 32px 28px;
+      text-align: center;
+      position: relative;
+    }
+
+    .flyer-header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 32px;
+      background: var(--white);
+      border-radius: 32px 32px 0 0;
+    }
+
+    .flyer-logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin-bottom: 14px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,.25));
+    }
+
+    .flyer-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.4);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .flyer-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .flyer-subtitle {
+      color: rgba(255,255,255,.85);
+      font-size: .88rem;
+      font-weight: 500;
+    }
+
+    /* ── CORPS ── */
+    .flyer-body {
+      padding: 32px 32px 28px;
+    }
+
+    /* ── INFOS CLÉS ── */
+    .info-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .info-item {
+      background: var(--gradient-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 8px;
+      text-align: center;
+    }
+
+    .info-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px;
+    }
+
+    .info-label {
+      display: block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      margin-bottom: 3px;
+    }
+
+    .info-value {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: .8rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.2;
+    }
+
+    /* ── SÉPARATEUR ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 0 24px;
+    }
+
+    /* ── SECTION QR ── */
+    .qr-section {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .qr-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--violet);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 6px;
+    }
+
+    .qr-instruction {
+      font-size: .85rem;
+      color: var(--text-mid);
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .qr-wrapper {
+      display: inline-block;
+      padding: 12px;
+      background: var(--white);
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(111,0,255,.18);
+      border: 2px solid var(--border);
+    }
+
+    .qr-wrapper img {
+      width: 180px;
+      height: 180px;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .qr-url {
+      margin-top: 12px;
+      font-size: .75rem;
+      color: var(--violet);
+      font-weight: 600;
+      word-break: break-all;
+      text-decoration: none;
+    }
+
+    .qr-url:hover { text-decoration: underline; }
+
+    /* ── FORMATRICE ── */
+    .formatrice-strip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--gradient-soft);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+    }
+
+    .formatrice-photo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 3px solid transparent;
+      background: var(--gradient);
+      padding: 2px;
+    }
+
+    .formatrice-photo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .formatrice-info { flex: 1; }
+
+    .formatrice-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .95rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+
+    .formatrice-role {
+      font-size: .75rem;
+      color: var(--text-mid);
+      line-height: 1.4;
+    }
+
+    .formatrice-contact {
+      font-size: .75rem;
+      color: var(--violet);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* ── FOOTER ── */
+    .flyer-footer {
+      background: var(--gradient);
+      padding: 16px 32px;
+      text-align: center;
+    }
+
+    .flyer-footer p {
+      color: rgba(255,255,255,.85);
+      font-size: .72rem;
+      line-height: 1.6;
+    }
+
+    .flyer-footer strong {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .flyer-title { font-size: 1.25rem; }
+      .flyer-body { padding: 24px 20px 20px; }
+      .flyer-header { padding: 28px 20px 24px; }
+      .info-strip { grid-template-columns: repeat(2, 1fr); }
+      .qr-wrapper img { width: 150px; height: 150px; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: white; padding: 0; }
+      .flyer { box-shadow: none; max-width: 100%; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<article class="flyer" role="main">
+
+  <!-- HEADER -->
+  <header class="flyer-header">
+    <img src="logo.png" alt="Logo Groupe Evolut'In" class="flyer-logo">
+    <div class="flyer-badge">Formation certifiante</div>
+    <h1 class="flyer-title">Maîtriser la Pratique<br>du Bilan de Compétences</h1>
+    <p class="flyer-subtitle">Devenez expert·e du bilan de compétences en 35 heures, 100 % à votre rythme</p>
+  </header>
+
+  <!-- CORPS -->
+  <div class="flyer-body">
+
+    <!-- INFOS CLÉS -->
+    <div class="info-strip" role="list" aria-label="Informations clés de la formation">
+
+      <div class="info-item" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <span class="info-label">Durée</span>
+        <span class="info-value">35 heures</span>
+      </div>
+
+      <div class="info-item" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span class="info-label">Format</span>
+        <span class="info-value">Distanciel asynchrone</span>
+      </div>
+
+      <div class="info-item" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <span class="info-label">Session</span>
+        <span class="info-value">1er – 30 juin 2025</span>
+      </div>
+
+      <div class="info-item" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <span class="info-label">Tarif</span>
+        <span class="info-value">3 000 € TTC</span>
+      </div>
+
+      <div class="info-item" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="info-label">Validation</span>
+        <span class="info-value">Certificat de réalisation</span>
+      </div>
+
+      <div class="info-item" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="info-label">Public</span>
+        <span class="info-value">Tout professionnel</span>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- QR CODE -->
+    <div class="qr-section">
+      <p class="qr-label">Accédez au programme complet</p>
+      <p class="qr-instruction">Scannez ce QR code avec l'appareil photo<br>de votre smartphone pour en savoir plus et vous inscrire.</p>
+      <div class="qr-wrapper">
+        <img src="qrcode-formation-final.png" alt="QR code — Page de formation Bilan de Compétences">
+      </div>
+      <br>
+      <a href="https://karine5380.github.io/formation-bilan-competences/" class="qr-url" target="_blank" rel="noopener">
+        karine5380.github.io/formation-bilan-competences
+      </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- FORMATRICE -->
+    <div class="formatrice-strip" role="complementary" aria-label="Votre formatrice">
+      <div style="width:56px;height:56px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid #6f00ff;padding:2px;background:linear-gradient(135deg,#6f00ff,#ff0080);">
+        <img src="karine-bertin.png" alt="Karine Bertin, formatrice" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;">
+      </div>
+      <div class="formatrice-info">
+        <p class="formatrice-name">Karine Bertin</p>
+        <p class="formatrice-role">Conseillère en évolution professionnelle · Consultante en bilan de compétences · Référente handicap</p>
+        <p class="formatrice-contact">✉ contact@groupe-evolut-in.com &nbsp;·&nbsp; 📞 06 27 61 39 50</p>
+      </div>
+    </div>
+
+  </div><!-- /flyer-body -->
+
+  <!-- FOOTER -->
+  <footer class="flyer-footer">
+    <p><strong>Groupe Evolut'In</strong> — S.A.S.U MY SUCCESS COMPANY<br>
+    NDA 11 75 65 40475 · SIRET 905 061 792 00016<br>
+    Prestations exonérées de TVA (art. 261-4-4a du CGI)</p>
+  </footer>
+
+</article>
+
+</body>
+</html>
