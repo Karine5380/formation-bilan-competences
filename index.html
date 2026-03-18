@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Formation certifiante : Maîtriser la Pratique du Bilan de Compétences — 35h en distanciel asynchrone. Groupe Evolut'In, Karine Bertin." />
+  <title>Formation — Maîtriser la Pratique du Bilan de Compétences | Groupe Evolut'In</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --violet:       #6B21A8;
+      --violet-dark:  #4C1D95;
+      --violet-light: #A855F7;
+      --rose:         #D946EF;
+      --rose-dark:    #A21CAF;
+      --gradient:     linear-gradient(135deg, #6B21A8 0%, #D946EF 100%);
+      --gradient-h:   linear-gradient(135deg, #4C1D95 0%, #A21CAF 100%);
+      --white:        #FFFFFF;
+      --off-white:    #FAF5FF;
+      --light-gray:   #F3F4F6;
+      --text-dark:    #1F2937;
+      --text-mid:     #4B5563;
+      --text-light:   #9CA3AF;
+      --border:       #E5E7EB;
+      --shadow:       0 4px 24px rgba(107, 33, 168, 0.12);
+      --shadow-lg:    0 8px 40px rgba(107, 33, 168, 0.18);
+      --radius:       12px;
+      --radius-lg:    20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.25;
+    }
+
+    a { color: var(--violet); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--rose); }
+
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+    }
+
+    .nav-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background .2s, color .2s;
+    }
+
+    .nav-links a:hover {
+      background: var(--off-white);
+      color: var(--violet);
+    }
+
+    .nav-cta {
+      background: var(--gradient) !important;
+      color: var(--white) !important;
+      -webkit-text-fill-color: var(--white) !important;
+      padding: 9px 20px !important;
+      border-radius: 50px !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gradient-h) !important;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--violet);
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: .3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('hero-banner.jpg');
+      background-size: cover;
+      background-position: center top;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(76,29,149,.88) 0%, rgba(107,33,168,.72) 40%, rgba(217,70,239,.45) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      padding: 80px 24px;
+      margin-left: calc((100vw - 1100px) / 2);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.3);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 12px rgba(0,0,0,.25);
+    }
+
+    .hero-accroche {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.9);
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.15);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,.25);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 50px;
+    }
+
+    .hero-meta-item svg {
+      flex-shrink: 0;
+      opacity: .9;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s, background .2s;
+      border: none;
+      text-decoration: none;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--violet);
+    }
+
+    .btn-primary:hover {
+      background: var(--off-white);
+      box-shadow: 0 6px 24px rgba(255,255,255,.3);
+      color: var(--violet-dark);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,.6);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.1);
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .btn-gradient {
+      background: var(--gradient);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-gradient:hover {
+      background: var(--gradient-h);
+      box-shadow: var(--shadow-lg);
+      color: #fff;
+    }
+
+    /* ===== SECTION BASE ===== */
+    section { padding: 72px 0; }
+    section:nth-child(even) { background: var(--off-white); }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-mid);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ===== INFOS CLÉS ===== */
+    .infos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .info-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+    .info-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-icon svg { color: #fff; }
+
+    .info-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .info-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* ===== OBJECTIFS ===== */
+    .objectifs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .objectif-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      border-left: 4px solid var(--violet);
+      box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    }
+
+    .objectif-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .objectif-item p {
+      font-size: .95rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+
+    /* ===== STATS QUALITÉ ===== */
+    .stats-bar {
+      background: var(--gradient);
+      border-radius: var(--radius-lg);
+      padding: 40px 48px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: #fff;
+    }
+
+    .stat-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: .85rem;
+      opacity: .9;
+      font-weight: 500;
+    }
+
+    /* ===== PROGRAMME ACCORDÉON ===== */
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .accordion-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+      transition: box-shadow .2s;
+    }
+
+    .accordion-item:hover { box-shadow: var(--shadow); }
+
+    .accordion-item.open { border-color: var(--violet-light); box-shadow: var(--shadow); }
+
+    .accordion-header {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      text-align: left;
+      transition: background .2s;
+    }
+
+    .accordion-header:hover { background: var(--off-white); }
+    .accordion-item.open .accordion-header { background: var(--off-white); }
+
+    .accordion-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: .85rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .accordion-title-wrap {
+      flex: 1;
+    }
+
+    .accordion-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+
+    .accordion-obj {
+      font-size: .8rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    .accordion-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--off-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform .3s, background .2s;
+    }
+
+    .accordion-item.open .accordion-arrow {
+      transform: rotate(180deg);
+      background: var(--gradient);
+    }
+
+    .accordion-item.open .accordion-arrow svg { color: #fff; }
+
+    .accordion-body {
+      display: none;
+      padding: 0 24px 24px;
+    }
+
+    .accordion-item.open .accordion-body { display: block; }
+
+    .sequence {
+      margin-bottom: 20px;
+    }
+
+    .sequence:last-child { margin-bottom: 0; }
+
+    .sequence-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--violet);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sequence-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gradient);
+      flex-shrink: 0;
+    }
+
+    .sequence-list {
+      list-style: none;
+      padding-left: 14px;
+    }
+
+    .sequence-list li {
+      font-size: .88rem;
+      color: var(--text-mid);
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .sequence-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: .8rem;
+    }
+
+    /* ===== MOYENS PÉDAGOGIQUES ===== */
+    .moyens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .moyen-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      text-align: center;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0,0,0,.04);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .moyen-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+    .moyen-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .moyen-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .moyen-card p {
+      font-size: .83rem;
+      color: var(--text-mid);
+      line-height: 1.55;
+    }
+
+    /* ===== PRÉREQUIS & PUBLIC ===== */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .info-block {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .info-block h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-block h3 span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .9rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+
+    .check-list li:last-child { border-bottom: none; }
+
+    .check-list li::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--gradient);
+      flex-shrink: 0;
+      margin-top: 1px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* ===== CARTE / LIEU ===== */
+    .map-section .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .map-info h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .map-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .map-detail-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .map-detail-text strong {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--text-light);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .map-detail-text span {
+      font-size: .9rem;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .map-embed {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 340px;
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== TÉLÉCHARGEMENTS ===== */
+    .downloads-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .download-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s;
+      min-width: 240px;
+    }
+
+    .download-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+    .download-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .download-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .download-card p {
+      font-size: .85rem;
+      color: var(--text-mid);
+    }
+
+    /* ===== FORMATRICE ===== */
+    .formatrice-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .formatrice-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .formatrice-info h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .formatrice-role {
+      font-size: .9rem;
+      color: var(--text-mid);
+      margin-bottom: 16px;
+    }
+
+    .formatrice-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .formatrice-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--violet);
+      background: var(--off-white);
+      padding: 6px 14px;
+      border-radius: 50px;
+      transition: background .2s, color .2s;
+    }
+
+    .formatrice-link:hover { background: var(--gradient); color: #fff; }
+
+    /* ===== CTA INSCRIPTION ===== */
+    .cta-section {
+      background: var(--gradient);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,.9);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-price {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.3);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      padding: 12px 32px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+    }
+
+    .cta-note {
+      font-size: .8rem;
+      color: rgba(255,255,255,.7);
+      margin-top: 16px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,.75);
+      padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand img {
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: .85rem;
+      line-height: 1.7;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .85rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+      font-size: .85rem;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,.65);
+      transition: color .2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--rose); }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: .85rem;
+    }
+
+    .footer-contact-item svg { color: var(--rose); flex-shrink: 0; }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.45);
+    }
+
+    .footer-bottom a { color: rgba(255,255,255,.55); }
+    .footer-bottom a:hover { color: var(--rose); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .two-col, .map-section .container { grid-template-columns: 1fr; }
+      .objectifs-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: #fff; padding: 16px 24px; border-bottom: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.1); z-index: 99; }
+      .nav-toggle { display: block; }
+      .hero-content { margin-left: 0; padding: 60px 24px; }
+      .stats-bar { padding: 28px 20px; }
+      .formatrice-card { flex-direction: column; text-align: center; padding: 28px 20px; }
+      .formatrice-links { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    /* ===== ACCESSIBILITÉ ===== */
+    :focus-visible {
+      outline: 3px solid var(--violet);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, transform .2s;
+      z-index: 50;
+    }
+
+    .scroll-top.visible { opacity: 1; pointer-events: auto; }
+    .scroll-top:hover { transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="logo.png" alt="Logo Groupe Evolut'In" />
+      <span class="nav-brand">Groupe Evolut'In</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#objectifs">Objectifs</a></li>
+      <li><a href="#programme">Programme</a></li>
+      <li><a href="#modalites">Modalités</a></li>
+      <li><a href="#formatrice">Formatrice</a></li>
+      <li><a href="#inscription" class="nav-cta">S'inscrire</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" role="banner">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      Formation certifiante
+    </div>
+    <h1>Maîtriser la Pratique du Bilan de Compétences</h1>
+    <p class="hero-accroche">Devenez conseiller expert en bilan de compétences. Une formation complète, 100 % à distance, pour accompagner vos bénéficiaires avec méthode et confiance.</p>
+    <div class="hero-meta" role="list">
+      <div class="hero-meta-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        35 heures
+      </div>
+      <div class="hero-meta-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Distanciel asynchrone
+      </div>
+      <div class="hero-meta-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        1er – 30 juin 2025
+      </div>
+      <div class="hero-meta-item" role="listitem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        3 000 € TTC
+      </div>
+    </div>
+    <div class="hero-buttons">
+      <a href="#inscription" class="btn btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        Je m'inscris
+      </a>
+      <a href="programme.pdf" download class="btn btn-outline">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Télécharger le programme
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== INFOS CLÉS ===== -->
+<section id="infos" aria-labelledby="infos-title">
+  <div class="container">
+    <p class="section-label">Vue d'ensemble</p>
+    <h2 class="section-title" id="infos-title">La formation en un coup d'œil</h2>
+    <p class="section-subtitle">Tout ce que vous devez savoir avant de vous inscrire.</p>
+    <div class="infos-grid" role="list">
+      <div class="info-card" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <span class="info-label">Durée</span>
+        <span class="info-value">35 heures</span>
+      </div>
+      <div class="info-card" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <span class="info-label">Modalité</span>
+        <span class="info-value">Distanciel asynchrone</span>
+      </div>
+      <div class="info-card" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <span class="info-label">Dates</span>
+        <span class="info-value">1er – 30 juin 2025</span>
+      </div>
+      <div class="info-card" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <span class="info-label">Tarif</span>
+        <span class="info-value">3 000 € TTC</span>
+      </div>
+      <div class="info-card" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="info-label">Validation</span>
+        <span class="info-value">Certificat de réalisation</span>
+      </div>
+      <div class="info-card" role="listitem">
+        <div class="info-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="info-label">Public</span>
+        <span class="info-value">Tout professionnel</span>
+      </div>
+    </div>
+
+    <!-- Stats qualité -->
+    <div class="stats-bar" role="region" aria-label="Indicateurs de qualité">
+      <div class="stat-item">
+        <span class="stat-number">0 %</span>
+        <span class="stat-label">Taux d'abandon</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10/10</span>
+        <span class="stat-label">Satisfaction globale</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10/10</span>
+        <span class="stat-label">Note pédagogie</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">6</span>
+        <span class="stat-label">Modules de formation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OBJECTIFS ===== -->
+<section id="objectifs" aria-labelledby="objectifs-title">
+  <div class="container">
+    <p class="section-label">Ce que vous apprendrez</p>
+    <h2 class="section-title" id="objectifs-title">Objectifs de la formation</h2>
+    <p class="section-subtitle">À l'issue de cette formation, vous serez pleinement opérationnel pour conduire et restituer un bilan de compétences.</p>
+    <div class="objectifs-grid">
+      <div class="objectif-item">
+        <div class="objectif-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <p>Conduire un bilan de compétences avec des techniques d'entretien adaptées à chaque bénéficiaire.</p>
+      </div>
+      <div class="objectif-item">
+        <div class="objectif-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <p>Analyser et restituer les résultats du bilan de compétences de façon claire et structurée.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAMME ===== -->
+<section id="programme" aria-labelledby="programme-title">
+  <div class="container">
+    <p class="section-label">Contenu détaillé</p>
+    <h2 class="section-title" id="programme-title">Programme de la formation</h2>
+    <p class="section-subtitle">6 modules progressifs pour maîtriser l'intégralité de la pratique du bilan de compétences.</p>
+
+    <div class="accordion" role="list">
+
+      <!-- MODULE 1 -->
+      <div class="accordion-item open" role="listitem">
+        <button class="accordion-header" aria-expanded="true" aria-controls="mod1-body" id="mod1-btn">
+          <div class="accordion-num" aria-hidden="true">1</div>
+          <div class="accordion-title-wrap">
+            <div class="accordion-title">Définir les modalités et conditions de réalisation d'un bilan de compétences</div>
+            <div class="accordion-obj">Comprendre et appliquer le cadre réglementaire et déontologique</div>
+          </div>
+          <div class="accordion-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="accordion-body" id="mod1-body" role="region" aria-labelledby="mod1-btn">
+          <div class="sequence">
+            <div class="sequence-title">Séquence 1 — Maîtriser le cadre réglementaire en vigueur</div>
+            <ul class="sequence-list">
+              <li>Appliquer les articles de référence dans le Code du travail</li>
+              <li>Respecter les trois phases du bilan : préliminaire, investigation, conclusion</li>
+              <li>Connaître les obligations Qualiopi pour les centres de bilans</li>
+              <li>Assurer la restitution des résultats et l'entretien de suivi à 6 mois</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 2 — Connaître le cadre déontologique</div>
+            <ul class="sequence-list">
+              <li>Garantir la confidentialité et la neutralité</li>
+              <li>Comprendre les principes de consentement éclairé du bénéficiaire</li>
+              <li>Maintenir une attitude neutre et impartiale tout au long du processus</li>
+              <li>Respecter le principe de non-jugement</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 3 — Comprendre l'environnement du dispositif</div>
+            <ul class="sequence-list">
+              <li>Identifier les acteurs et les sources de financement (CPF, France Travail, entreprises)</li>
+              <li>Adapter l'accompagnement aux situations de handicap</li>
+              <li>Proposer des aménagements raisonnables et pertinents</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 2 -->
+      <div class="accordion-item" role="listitem">
+        <button class="accordion-header" aria-expanded="false" aria-controls="mod2-body" id="mod2-btn">
+          <div class="accordion-num" aria-hidden="true">2</div>
+          <div class="accordion-title-wrap">
+            <div class="accordion-title">Développer sa posture de conseiller facilitateur</div>
+            <div class="accordion-obj">Adopter une posture professionnelle et éthique</div>
+          </div>
+          <div class="accordion-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="accordion-body" id="mod2-body" role="region" aria-labelledby="mod2-btn">
+          <div class="sequence">
+            <div class="sequence-title">Séquence 1 — La notion de tiers extérieur et de neutralité</div>
+            <ul class="sequence-list">
+              <li>Respecter l'obligation de moyen sans présupposé</li>
+              <li>S'abstenir de tout jugement ou préjugé sur le bénéficiaire</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 2 — Poser clairement le cadre de la prestation</div>
+            <ul class="sequence-list">
+              <li>Établir un contrat d'engagement et une charte déontologique</li>
+              <li>Définir les attentes et responsabilités de chaque partie</li>
+              <li>Reconnaître les limites de ses compétences et orienter si nécessaire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 3 -->
+      <div class="accordion-item" role="listitem">
+        <button class="accordion-header" aria-expanded="false" aria-controls="mod3-body" id="mod3-btn">
+          <div class="accordion-num" aria-hidden="true">3</div>
+          <div class="accordion-title-wrap">
+            <div class="accordion-title">Conduire un entretien d'analyse de la demande</div>
+            <div class="accordion-obj">Mener un entretien initial pour analyser et valider la demande</div>
+          </div>
+          <div class="accordion-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="accordion-body" id="mod3-body" role="region" aria-labelledby="mod3-btn">
+          <div class="sequence">
+            <div class="sequence-title">Séquence 1 — Maîtrise et outils de la démarche d'analyse</div>
+            <ul class="sequence-list">
+              <li>Utilisation de la grille APS et de la trame d'entretien</li>
+              <li>Techniques d'entretien adaptées</li>
+              <li>Évaluation et synthèse des informations recueillies</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 2 — Présenter le cadre du bilan de compétences</div>
+            <ul class="sequence-list">
+              <li>Questionnement, reformulation, écoute active</li>
+              <li>Poser des questions ouvertes pour encourager l'expression</li>
+              <li>Pratiquer l'écoute active pour montrer de l'empathie</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 3 — Collecter les informations pour personnaliser le parcours</div>
+            <ul class="sequence-list">
+              <li>Expliquer la démarche et les possibilités de financement</li>
+              <li>Identifier les attentes, freins et ressources du bénéficiaire</li>
+              <li>Analyser les motivations et objectifs professionnels</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 4 -->
+      <div class="accordion-item" role="listitem">
+        <button class="accordion-header" aria-expanded="false" aria-controls="mod4-body" id="mod4-btn">
+          <div class="accordion-num" aria-hidden="true">4</div>
+          <div class="accordion-title-wrap">
+            <div class="accordion-title">Explorer le parcours professionnel et personnel</div>
+            <div class="accordion-obj">Faciliter l'émergence des compétences et ressources du bénéficiaire</div>
+          </div>
+          <div class="accordion-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="accordion-body" id="mod4-body" role="region" aria-labelledby="mod4-btn">
+          <div class="sequence">
+            <div class="sequence-title">Séquence 1 — Utiliser différentes techniques d'entretien</div>
+            <ul class="sequence-list">
+              <li>Entretiens directif, semi-directif, non directif</li>
+              <li>Choisir la technique adaptée à la situation du bénéficiaire</li>
+              <li>Conduire des entretiens structurés pour obtenir des informations pertinentes</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 2 — Explorer les composantes du parcours</div>
+            <ul class="sequence-list">
+              <li>Identifier étapes, réussites et compétences développées</li>
+              <li>Évaluer motivations, centres d'intérêt, valeurs et aspirations</li>
+              <li>Proposer des outils (fiches métier, enquêtes métier)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 5 -->
+      <div class="accordion-item" role="listitem">
+        <button class="accordion-header" aria-expanded="false" aria-controls="mod5-body" id="mod5-btn">
+          <div class="accordion-num" aria-hidden="true">5</div>
+          <div class="accordion-title-wrap">
+            <div class="accordion-title">Sélectionner les outils du bilan de compétences</div>
+            <div class="accordion-obj">Choisir et utiliser les outils appropriés pour chaque bénéficiaire</div>
+          </div>
+          <div class="accordion-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="accordion-body" id="mod5-body" role="region" aria-labelledby="mod5-btn">
+          <div class="sequence">
+            <div class="sequence-title">Séquence 1 — Connaître les différents outils du bilan</div>
+            <ul class="sequence-list">
+              <li>Génogramme, inventaire des intérêts professionnels, grilles d'évaluation</li>
+              <li>Interpréter et restituer les résultats de manière compréhensible</li>
+              <li>Proposer des actions concrètes en fonction des résultats</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 2 — Adapter les outils aux besoins du bénéficiaire</div>
+            <ul class="sequence-list">
+              <li>Expliquer les consignes et objectifs de chaque outil</li>
+              <li>S'assurer que le bénéficiaire comprend l'objectif de chaque outil utilisé</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 6 -->
+      <div class="accordion-item" role="listitem">
+        <button class="accordion-header" aria-expanded="false" aria-controls="mod6-body" id="mod6-btn">
+          <div class="accordion-num" aria-hidden="true">6</div>
+          <div class="accordion-title-wrap">
+            <div class="accordion-title">Formaliser un plan d'action et des préconisations</div>
+            <div class="accordion-obj">Conclure le bilan avec un plan d'action structuré et argumenté</div>
+          </div>
+          <div class="accordion-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="accordion-body" id="mod6-body" role="region" aria-labelledby="mod6-btn">
+          <div class="sequence">
+            <div class="sequence-title">Séquence 1 — Recenser les résultats de l'investigation</div>
+            <ul class="sequence-list">
+              <li>Identifier les leviers d'action (atouts, priorités, compétences transférables)</li>
+              <li>Analyser les résultats pour identifier les atouts du bénéficiaire</li>
+            </ul>
+          </div>
+          <div class="sequence">
+            <div class="sequence-title">Séquence 2 — Élaborer un plan d'action co-construit</div>
+            <ul class="sequence-list">
+              <li>Argumenter et présenter les projets professionnels retenus</li>
+              <li>Planifier un entretien de suivi pour sécuriser l'ancrage du plan</li>
+              <li>Rédiger une synthèse pour finaliser le bilan de compétences</li>
+              <li>Organiser un suivi pour ajuster et valider les actions mises en œuvre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MOYENS PÉDAGOGIQUES ===== -->
+<section id="modalites" aria-labelledby="modalites-title">
+  <div class="container">
+    <p class="section-label">Comment ça se passe</p>
+    <h2 class="section-title" id="modalites-title">Moyens pédagogiques et évaluation</h2>
+    <p class="section-subtitle">Une pédagogie active et variée pour ancrer durablement les compétences.</p>
+
+    <div class="moyens-grid">
+      <div class="moyen-card">
+        <div class="moyen-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h4>Salle virtuelle dédiée</h4>
+        <p>Accueil dans un espace numérique exclusif, conçu pour la formation.</p>
+      </div>
+      <div class="moyen-card">
+        <div class="moyen-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h4>Trousse d'outils spécialisée</h4>
+        <p>Matériel pédagogique complet et documents projetés fournis.</p>
+      </div>
+      <div class="moyen-card">
+        <div class="moyen-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>Études de cas & Q/R</h4>
+        <p>Apports théoriques, mises en situation et échanges interactifs.</p>
+      </div>
+      <div class="moyen-card">
+        <div class="moyen-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h4>Évaluation continue</h4>
+        <p>Quiz, mises en situation, questionnaire de positionnement et évaluation à chaud.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRÉREQUIS & PUBLIC ===== -->
+<section id="prerequis" aria-labelledby="prerequis-title">
+  <div class="container">
+    <p class="section-label">Conditions d'accès</p>
+    <h2 class="section-title" id="prerequis-title">Public et prérequis</h2>
+    <p class="section-subtitle">Cette formation s'adresse à toute personne souhaitant exercer la pratique du bilan de compétences.</p>
+    <div class="two-col">
+      <div class="info-block">
+        <h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <span>Public cible</span>
+        </h3>
+        <ul class="check-list">
+          <li>Toute personne souhaitant se former à la pratique du bilan de compétences</li>
+          <li>Conseillers en évolution professionnelle</li>
+          <li>Professionnels RH et du coaching</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Prérequis</span>
+        </h3>
+        <ul class="check-list">
+          <li>Diplôme de niveau 4 (Baccalauréat) minimum</li>
+          <li>Abonnement ChatGPT Plus (20 €/mois)</li>
+          <li>Maîtrise de l'informatique</li>
+          <li>Connexion internet haut débit (impératif)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARTE / LIEU ===== -->
+<section id="lieu" aria-labelledby="lieu-title">
+  <div class="container">
+    <p class="section-label">Où nous trouver</p>
+    <h2 class="section-title" id="lieu-title">Lieu et accès</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div class="map-info">
+        <div class="map-detail">
+          <div class="map-detail-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="map-detail-text">
+            <strong>Adresse du siège</strong>
+            <span>6 rue d'Armaillé, 75017 Paris</span>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="map-detail-text">
+            <strong>Format</strong>
+            <span>100 % distanciel asynchrone</span>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="map-detail-text">
+            <strong>Session</strong>
+            <span>1er – 30 juin 2025</span>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="map-detail-text">
+            <strong>Contact</strong>
+            <span>06 27 61 39 50</span>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:var(--text-light);margin-top:12px;">
+          La formation se déroule entièrement en ligne. L'adresse ci-dessus correspond au siège social de l'organisme.
+        </p>
+      </div>
+      <div class="map-embed">
+        <iframe
+          title="Carte — Siège social Groupe Evolut'In, 6 rue d'Armaillé, Paris 17"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.8!2d2.2985!3d48.8815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f9f8e3b1e2b%3A0x1234!2s6+Rue+d'Armaillé%2C+75017+Paris!5e0!3m2!1sfr!2sfr!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Carte Google Maps — 6 rue d'Armaillé, 75017 Paris">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TÉLÉCHARGEMENTS ===== -->
+<section id="telechargements" aria-labelledby="dl-title">
+  <div class="container" style="text-align:center;">
+    <p class="section-label">Documents</p>
+    <h2 class="section-title" id="dl-title">Téléchargements</h2>
+    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Retrouvez ci-dessous le programme complet de la formation au format PDF.</p>
+    <div class="downloads-grid">
+      <div class="download-card">
+        <div class="download-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h4>Programme de formation</h4>
+        <p>Contenu détaillé des 6 modules, objectifs et modalités</p>
+        <a href="programme.pdf" download class="btn btn-gradient" aria-label="Télécharger le programme de formation en PDF">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Télécharger le PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORMATRICE ===== -->
+<section id="formatrice" aria-labelledby="formatrice-title">
+  <div class="container" style="text-align:center;">
+    <p class="section-label">Votre interlocutrice</p>
+    <h2 class="section-title" id="formatrice-title">Votre formatrice</h2>
+    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Une experte reconnue pour vous accompagner tout au long de votre parcours.</p>
+    <div class="formatrice-card">
+      <div class="formatrice-avatar" aria-hidden="true">KB</div>
+      <div class="formatrice-info">
+        <h3>Karine Bertin</h3>
+        <p class="formatrice-role">Conseillère en évolution professionnelle · Consultante en bilan de compétences · Référente handicap</p>
+        <div class="formatrice-links">
+          <a href="https://www.linkedin.com/in/karine-bertin/" target="_blank" rel="noopener noreferrer" class="formatrice-link" aria-label="Profil LinkedIn de Karine Bertin (nouvelle fenêtre)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:contact@groupe-evolut-in.com" class="formatrice-link" aria-label="Envoyer un email à Karine Bertin">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contact@groupe-evolut-in.com
+          </a>
+          <a href="tel:+33627613950" class="formatrice-link" aria-label="Appeler Karine Bertin">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06 27 61 39 50
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA INSCRIPTION ===== -->
+<section id="inscription" class="cta-section" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title">Prêt·e à maîtriser le bilan de compétences ?</h2>
+    <p>Rejoignez la prochaine session et obtenez votre certificat de réalisation en 35 heures, entièrement à votre rythme.</p>
+    <div class="cta-price" aria-label="Tarif : 3 000 euros TTC par participant">3 000 € TTC / participant</div>
+    <br />
+    <a href="mailto:contact@groupe-evolut-in.com?subject=Inscription%20Formation%20Bilan%20de%20Compétences%20Juin%202025" class="btn btn-primary" style="font-size:1rem;padding:16px 36px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      Je m'inscris à la session de juin
+    </a>
+    <p class="cta-note">Prestations de formation exonérées de TVA (article 261-4-4a du CGI) · Toute situation de handicap fera l'objet d'une étude spécifique</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Logo Groupe Evolut'In" />
+        <p>S.A.S.U MY SUCCESS COMPANY — Organisme de formation enregistré sous le n° 11 75 65 40475 à la préfecture de Paris et d'Île-de-France.</p>
+        <p style="margin-top:8px;">SIRET : 905 061 792 00016</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#objectifs">Objectifs</a></li>
+          <li><a href="#programme">Programme</a></li>
+          <li><a href="#modalites">Modalités</a></li>
+          <li><a href="#prerequis">Prérequis</a></li>
+          <li><a href="#formatrice">Formatrice</a></li>
+          <li><a href="#inscription">Inscription</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          6 rue d'Armaillé, 75017 Paris
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+33627613950">06 27 61 39 50</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:contact@groupe-evolut-in.com">contact@groupe-evolut-in.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <a href="https://www.groupe-evolut-in.com" target="_blank" rel="noopener noreferrer">www.groupe-evolut-in.com</a>
+        </div>
+        <div style="margin-top:16px;">
+          <a href="https://www.groupe-evolut-in.com/politique-inclusion-handicap" target="_blank" rel="noopener noreferrer" style="font-size:.8rem;color:rgba(255,255,255,.55);text-decoration:underline;" aria-label="Politique d'inclusion et de gestion du handicap (nouvelle fenêtre)">
+            Politique d'inclusion &amp; gestion du handicap
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <span>© 2025 Groupe Evolut'In — S.A.S.U MY SUCCESS COMPANY. Tous droits réservés.</span>
+      <span>
+        <a href="https://www.groupe-evolut-in.com" target="_blank" rel="noopener noreferrer">www.groupe-evolut-in.com</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.groupe-evolut-in.com/politique-inclusion-handicap" target="_blank" rel="noopener noreferrer">Accessibilité &amp; Handicap</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- Bouton retour en haut -->
+<button class="scroll-top" id="scrollTop" aria-label="Retour en haut de page">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  // Accordéon
+  document.querySelectorAll('.accordion-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.accordion-item');
+      const isOpen = item.classList.contains('open');
+      // Fermer tous
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+      });
+      // Ouvrir le cliqué si était fermé
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Menu mobile
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  // Scroll to top
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Fermer le menu mobile au clic sur un lien
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => links.classList.remove('open'));
+  });
+</script>
+
+</body>
+</html>
