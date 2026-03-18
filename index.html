@@ -834,10 +834,14 @@
     }
 
     .formatrice-avatar {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 4px solid transparent;
       background: var(--gradient);
+      padding: 3px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1615,7 +1619,9 @@
     <h2 class="section-title" id="formatrice-title">Votre formatrice</h2>
     <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Une experte reconnue pour vous accompagner tout au long de votre parcours.</p>
     <div class="formatrice-card">
-      <div class="formatrice-avatar" aria-hidden="true">KB</div>
+      <div class="formatrice-avatar" aria-hidden="true">
+        <img src="karine-bertin.png" alt="Karine Bertin, formatrice" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;">
+      </div>
       <div class="formatrice-info">
         <h3>Karine Bertin</h3>
         <p class="formatrice-role">Conseillère en évolution professionnelle · Consultante en bilan de compétences · Référente handicap</p>
